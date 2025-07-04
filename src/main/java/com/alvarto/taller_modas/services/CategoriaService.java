@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class CategoriaService {
+    
     private final CategoriaRepository categoriaRepository;
     
     // Mapear de Entidad a DTO

@@ -1,36 +1,36 @@
--- data.sql
-INSERT INTO role (id, name) VALUES (0, 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO role (id, name) VALUES (1, 1) ON CONFLICT (id) DO NOTHING;
+-- -- data.sql
+-- INSERT INTO role (id, name) VALUES (0, 0) ON CONFLICT (id) DO NOTHING;
+-- INSERT INTO role (id, name) VALUES (1, 1) ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO categorias (nombre, descripcion) VALUES 
-('Camisas', 'Todo tipo de camisas para hombre y mujer'),
-('Pantalones', 'Pantalones de mezclilla, vestir y más'),
-('Vestidos', 'Vestidos casuales y formales'),
-('Accesorios', 'Cinturones, joyería y más'),
-('Calzado', 'Zapatos, tenis y sandalias');
+-- INSERT INTO categorias (nombre, descripcion) VALUES 
+-- ('Camisas', 'Todo tipo de camisas para hombre y mujer'),
+-- ('Pantalones', 'Pantalones de mezclilla, vestir y más'),
+-- ('Vestidos', 'Vestidos casuales y formales'),
+-- ('Accesorios', 'Cinturones, joyería y más'),
+-- ('Calzado', 'Zapatos, tenis y sandalias');
 
--- Insertar productos
-INSERT INTO productos (nombre, descripcion, precio, color, talla, imagen, categoria_id, fecha_creacion, fecha_actualizacion) VALUES
-('Camisa Casual', 'Camisa de algodón de manga corta', 299.99, 'Azul', 'M', 'camisa-casual.jpg', 1, NOW(), NOW()),
-('Camisa Formal', 'Camisa de vestir manga larga', 399.99, 'Blanco', 'L', 'camisa-formal.jpg', 1, NOW(), NOW()),
-('Pantalón de Mezclilla', 'Pantalón de mezclilla slim fit', 499.99, 'Azul oscuro', '32', 'pantalon-mezclilla.jpg', 2, NOW(), NOW()),
-('Pantalón de Vestir', 'Pantalón formal de poliéster', 599.99, 'Negro', '30', 'pantalon-vestir.jpg', 2, NOW(), NOW()),
-('Vestido Casual', 'Vestido casual de algodón', 399.99, 'Rojo', 'S', 'vestido-casual.jpg', 3, NOW(), NOW()),
-('Vestido de Noche', 'Vestido largo para ocasiones formales', 999.99, 'Negro', 'M', 'vestido-noche.jpg', 3, NOW(), NOW()),
-('Cinturón de Cuero', 'Cinturón de cuero genuino', 199.99, 'Café', 'Única', 'cinturon-cuero.jpg', 4, NOW(), NOW()),
-('Collar de Plata', 'Collar con dije de plata', 299.99, 'Plateado', 'Única', 'collar-plata.jpg', 4, NOW(), NOW()),
-('Zapatos Formales', 'Zapatos de vestir para hombre', 799.99, 'Negro', '28', 'zapatos-formales.jpg', 5, NOW(), NOW()),
-('Tenis Deportivos', 'Tenis para correr', 699.99, 'Blanco', '27', 'tenis-deportivos.jpg', 5, NOW(), NOW());
+-- -- Insertar productos
+-- INSERT INTO productos (nombre, descripcion, precio, color, talla, imagen, categoria_id, fecha_creacion, fecha_actualizacion) VALUES
+-- ('Camisa Casual', 'Camisa de algodón de manga corta', 299.99, 'Azul', 'M', 'camisa-casual.jpg', 1, NOW(), NOW()),
+-- ('Camisa Formal', 'Camisa de vestir manga larga', 399.99, 'Blanco', 'L', 'camisa-formal.jpg', 1, NOW(), NOW()),
+-- ('Pantalón de Mezclilla', 'Pantalón de mezclilla slim fit', 499.99, 'Azul oscuro', '32', 'pantalon-mezclilla.jpg', 2, NOW(), NOW()),
+-- ('Pantalón de Vestir', 'Pantalón formal de poliéster', 599.99, 'Negro', '30', 'pantalon-vestir.jpg', 2, NOW(), NOW()),
+-- ('Vestido Casual', 'Vestido casual de algodón', 399.99, 'Rojo', 'S', 'vestido-casual.jpg', 3, NOW(), NOW()),
+-- ('Vestido de Noche', 'Vestido largo para ocasiones formales', 999.99, 'Negro', 'M', 'vestido-noche.jpg', 3, NOW(), NOW()),
+-- ('Cinturón de Cuero', 'Cinturón de cuero genuino', 199.99, 'Café', 'Única', 'cinturon-cuero.jpg', 4, NOW(), NOW()),
+-- ('Collar de Plata', 'Collar con dije de plata', 299.99, 'Plateado', 'Única', 'collar-plata.jpg', 4, NOW(), NOW()),
+-- ('Zapatos Formales', 'Zapatos de vestir para hombre', 799.99, 'Negro', '28', 'zapatos-formales.jpg', 5, NOW(), NOW()),
+-- ('Tenis Deportivos', 'Tenis para correr', 699.99, 'Blanco', '27', 'tenis-deportivos.jpg', 5, NOW(), NOW());
 
--- Insertar inventarios
-INSERT INTO inventarios (producto_id, cantidad, nivel_minimo, ultima_actualizacion) VALUES
-(1, 50, 10, NOW()),
-(2, 30, 5, NOW()),
-(3, 45, 10, NOW()),
-(4, 25, 5, NOW()),
-(5, 20, 5, NOW()),
-(6, 15, 3, NOW()),
-(7, 40, 10, NOW()),
-(8, 35, 5, NOW()),
-(9, 20, 5, NOW()),
-(10, 30, 10, NOW());
+-- -- Insertar inventarios
+-- INSERT INTO inventarios (producto_id, cantidad, nivel_minimo, ultima_actualizacion) VALUES
+-- (1, 50, 10, NOW()),
+-- (2, 30, 5, NOW()),
+-- (3, 45, 10, NOW()),
+-- (4, 25, 5, NOW()),
+-- (5, 20, 5, NOW()),
+-- (6, 15, 3, NOW()),
+-- (7, 40, 10, NOW()),
+-- (8, 35, 5, NOW()),
+-- (9, 20, 5, NOW()),
+-- (10, 30, 10, NOW());

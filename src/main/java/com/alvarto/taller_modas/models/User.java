@@ -22,9 +22,15 @@ public class User {
     @Column(unique = true, nullable = false)
     private String userName;
 
-    @jakarta.validation.constraints.NotBlank
+    //@jakarta.validation.constraints.NotBlank
     @Column(nullable = false)
     private String password;
+
+    @Column(unique = true) // El email del usuario de OAuth
+    private String email;
+
+    private String provider; // Ej. "GOOGLE", "FACEBOOK", "LOCAL"
+    private boolean enabled = true; // Para controlar si el usuario está habilitado o no
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "role_id", nullable = false)
@@ -34,5 +40,7 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.role = role;
+        this.email = userName; 
+        this.provider = "LOCAL";
     }
 }

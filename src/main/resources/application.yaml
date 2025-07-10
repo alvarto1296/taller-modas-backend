@@ -4,7 +4,8 @@ jwt:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5432/taller_modas
+    #url: jdbc:postgresql://postgres:5432/taller_modas
+    url: jdbc:postgresql://172.26.0.2:5432/taller_modas
     username: alvaro
     password: 123
   jpa:
@@ -15,10 +16,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
-  sql:
-    init:
-      mode: always
-      platform: postgresql
+ 
+  # sql:
+  #   init:
+  #     mode: always
+  #     platform: postgresql
   
   security:
     oauth2:
